@@ -1,0 +1,23 @@
+<?php
+
+namespace App;
+
+use NGT\Laravel\Abilities\Traits\UserGroupAbilities;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Config;
+
+class UserGroup extends Model
+{
+    use UserGroupAbilities;
+
+    protected $fillable = [
+        'name',
+    ];
+
+    public function users()
+    {
+        return $this->hasMany(
+            Config::get('abilities.models.user'), 'user_group_id', 'id'
+        );
+    }
+}

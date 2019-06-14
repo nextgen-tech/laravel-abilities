@@ -1,0 +1,11 @@
+<?php
+
+use NGT\Laravel\Abilities\Facades\Ability;
+
+// Ability::group(['prefix' => 'admin'], function () {
+//     Ability::resource('user', 'Users', ['except' => ['show']]);
+
+//     Ability::group(['prefix' => 'user', 'label' => 'Users'], function () {
+//         Ability::define('connect', 'Connect');
+//     });
+// });
